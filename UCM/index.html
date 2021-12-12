@@ -9,7 +9,9 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play UCM.</tw-noscript></noscript></tw-story>
-<tw-storydata name="UCM" startnode="1" creator="Twine" creator-version="2.3.15" ifid="24E2A1D9-8603-492F-83DF-893943C1F487" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="UCM_Launch" tags="TitleScreenBG" position="31.333333333333336,52.333333333333336" size="100,100">#UCM
+<tw-storydata name="UCM" startnode="1" creator="Twine" creator-version="2.3.15" ifid="24E2A1D9-8603-492F-83DF-893943C1F487" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="UCMLaunch" tags="TitleScreenBG" position="29.666666666666668,52.333333333333336" size="100,100">{
+}
+#UCM
 &quot;We find ourselves on the precipice 
 of a great moment in history. 
 Not only for this nation, 
@@ -21,7 +23,7 @@ The promise of universal safety realized.&quot;
 
 
 (align:&quot;=&gt;&lt;=&quot;)[[[Start-&gt;wakeUp]]]
-(align:&quot;=&gt;&lt;=&quot;)[[[About-&gt;about]]]</tw-passagedata><tw-passagedata pid="2" name="about" tags="" position="202.33333333333334,51.333333333333336" size="100,100">Created by Ethan Oser
+(align:&quot;=&gt;&lt;=&quot;)[[[About-&gt;about]]]</tw-passagedata><tw-passagedata pid="2" name="about" tags="" position="220.66666666666669,51.333333333333336" size="100,100">Created by Ethan Oser
 American University
 Final Project GAME 601 Fall 2021</tw-passagedata><tw-passagedata pid="3" name="wakeUp" tags="" position="53.333333333333336,251.66666666666669" size="100,100">{
 (set: $batteryCount to 0)
@@ -49,7 +51,7 @@ Rise and shine, kiddo. Chris called in sick and it&#39;s your turn to cover. Gra
 (t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Close-&gt; getDressed]]]]
 
 
-&lt;!--(t8n:&quot;fade&quot;)+(t8n-delay:7s)[Best not to delay any longer. It&#39;s time to [[get ready-&gt; getDressed]].]--&gt;</tw-passagedata><tw-passagedata pid="5" name=" getDressed" tags="" position="59.333333333333336,507.6666666666667" size="100,100">As you rise to your feet, a large screen on the opposite wall flickers on, illuminating the drab studio apartment. (text-colour:#59c1e2)[&#39;&#39;UCM&#39;&#39;] appears in glowing blue letters on the screen.
+&lt;!--(t8n:&quot;fade&quot;)+(t8n-delay:7s)[Best not to delay any longer. It&#39;s time to [[get ready-&gt; getDressed]].]--&gt;</tw-passagedata><tw-passagedata pid="5" name=" getDressed" tags="" position="59.333333333333336,507.6666666666667" size="100,100">As you rise to your feet, a large screen on the opposite wall flickers on, illuminating the drab studio apartment. &#39;&#39;UCM&#39;&#39; appears in glowing blue letters on the screen.
 
 Equipment Checklist:
 {
@@ -63,10 +65,9 @@ Equipment Checklist:
 
 
 
-(if: ($badge is true) and ($uniform is true) and ($batteryCount is 3) and ($wireCount is 3))[[[Leave for your shift-&gt; exitHome]]]</tw-passagedata><tw-passagedata pid="6" name=" exitHome" tags="" position="282.6666666666667,890.6666666666666" size="100,100">All is quiet in the neighborhood. Narrow rowhouses line the streets, each adorning a UCM Home Unit front door panel. Only a few years this neighborhood would have been dark, so to speak. Thanks to the promise of UCM Corp every house in town has a Home Unit. 
+(if: ($badge is true) and ($uniform is true) and ($batteryCount is 3) and ($wireCount is 3))[[[Leave for your shift-&gt; exitHome]]]</tw-passagedata><tw-passagedata pid="6" name=" exitHome" tags="" position="282.6666666666667,890.6666666666666" size="100,100">All is quiet at this hour of the night. The streets are lined with narrow rowhouses, each adorning a UCM Home Unit panel on the front door. Only a few years ago this neighborhood would have been dark...so to speak. Now every house in town has a Home Unit courtesy of UCM Corp. 
 
-Blue lights from the Home Unit screens spill onto the sidewalk as you walk along Oak Street. A short ways down the road the consisten line of blue lights is interrupted by a blinking yellow light.
-
+The blue lights from the Home Unit screens spill onto the sidewalk as you walk along Oak Street. A short ways down the road the endless line of blue lights is interrupted by a blinking yellow light.
 
 
 [[Approach the house -&gt; missionOneStart]]</tw-passagedata><tw-passagedata pid="7" name=" missionOneStart" tags="" position="738.3333333333334,120.99999999999996" size="100,100">12 OAK STREET
@@ -100,34 +101,33 @@ Standard issue UCM Representative uniform. Crisp, clean and new.
 (set: $wireCount to $wireCounty + 3)
 (set: $arrestBeacon to true)
 }
-(text-colour:#ff64b1)[&#39;&#39;Batteries ($batteryCount)&#39;&#39;] and (text-colour:#ff64b1)[&#39;&#39;wires ($wireCount)&#39;&#39;] are all you need to fix any offline UCM home units. Remember, a Representative is only as good as their tools. Run out of batteries or wires on your route and you might as well pack it in for the night.
+(text-colour:#ff64b1)[&#39;&#39;Batteries ($batteryCount)&#39;&#39;] and (text-colour:#ff64b1)[&#39;&#39;wires ($wireCount)&#39;&#39;] are all you need to fix any offline UCM Home Units. Remember, a Representative is only as good as their tools. Run out of batteries or wires on your route and you might as well pack it in for the night.
 
 If you run into any suspicious homeowners that (text-colour:#ff64b1)[&#39;&#39;arrest beacon&#39;&#39;] will come in handy.
 
 
 
-[[Back -&gt; getDressed]]</tw-passagedata><tw-passagedata pid="11" name=" huOne" tags="" position="976.6666666666667,176.33333333333334" size="100,100">(if: $missionOne is false)
+[[Back -&gt; getDressed]]</tw-passagedata><tw-passagedata pid="11" name=" huOne" tags="" position="973.3333333333335,176.33333333333334" size="100,100">(if: $missionOne is false)
 [(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[^^ADDRESS:^^ &#39;&#39;12 Oak Street&#39;&#39;
 ^^UCM Home Unit Model T90XPPR^^
-][(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]]]{
+](text-style:&quot;blink&quot;)[(text-style:&quot;smear&quot;)+(text-colour:#ffd200)[&#39;&#39;OFFLINE&#39;&#39;]]]]{
 
 
 }(if: $missionOne is true)
 [(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[^^ADDRESS:^^ &#39;&#39;12 Oak Street&#39;&#39;
 ^^UCM Home Unit Model T90XPPR^^
-][(text-colour:#00a8e4)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;ONLINE&#39;&#39;]]]]]
+][(text-style:&quot;smear&quot;)+(text-colour:#00a8e4)[&#39;&#39;ONLINE&#39;&#39;]]]]
 
 
 {
 [[Back -&gt; missionOneStart]]
-}</tw-passagedata><tw-passagedata pid="12" name=" missionOneScan" tags="" position="969.6666666666667,373.33333333333337" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="12" name=" missionOneScan" tags="" position="969.6666666666667,371.6666666666667" size="100,100">{
 (set: $doorOneUnlock to false)
 }
-(text-style:&quot;smear&quot;)[(font:&quot;Monospace&quot;)[Hello, Representative 71145.
+(text-style:&quot;smear&quot;)+(font:&quot;Monospace&quot;)[Hello, Representative 71145.
 Residents: 4
-
 (text-colour: #ffd200)[[[&gt;&gt;  Notify Casandra Taylor - owner -&gt; missionOneOwner]]
-(if: $doorOneUnlock is false)[[[&gt;&gt;  Unlock Front Door -&gt; missionOneUnlock]]]]]]
+(if: $doorOneUnlock is false)[[[&gt;&gt;  Unlock Front Door -&gt; missionOneUnlock]]]]]
 
 
 
@@ -150,7 +150,7 @@ The deadbolt on the door clicks open.
 
 
 [[Enter -&gt; missionOneHouse]]
-[[Back -&gt; missionOneScan]]</tw-passagedata><tw-passagedata pid="16" name=" missionOneHouse" tags="" position="725.6666666666666,639.6666666666666" size="100,100">The house is dark and quiet. 10 feet down the hall is a panel on the wall similar to the one at the front door. As you approach the home unit, the [[panel -&gt; missionOneHomeUnit]] lights up.</tw-passagedata><tw-passagedata pid="17" name=" missionOneHomeUnit" tags="" position="900.6666666666667,780.0000000000001" size="100,100">(if: $missionOne is false)[(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]
+[[Back -&gt; missionOneScan]]</tw-passagedata><tw-passagedata pid="16" name=" missionOneHouse" tags="" position="725.6666666666666,639.6666666666666" size="100,100">The house is dark except for the blinking Home Unit down the hall. As you approach the unit, the [[panel -&gt; missionOneHomeUnit]] lights up.</tw-passagedata><tw-passagedata pid="17" name=" missionOneHomeUnit" tags="" position="880.6666666666667,798.3333333333335" size="100,100">(if: $missionOne is false)[(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]
 
 [[Scan badge -&gt; missionOneScanOpenPanel]]]]{
 
@@ -162,21 +162,21 @@ The deadbolt on the door clicks open.
 (click-replace: &quot;Call Arrest Beacon&quot;)
 [[[Are you sure? -&gt; missionOneArrestBeacon]]]]
 }
-[[Close Home Unit -&gt; missionOneHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="18" name=" missionOneScanOpenPanel" tags="" position="1118.666666666667,917.6666666666669" size="100,100">The panel on the wall lifts open revealing the internal workings of the home unit. 
+[[Close Home Unit -&gt; missionOneHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="18" name=" missionOneScanOpenPanel" tags="" position="1108.666666666667,882.6666666666669" size="100,100">The panel on the wall lifts open revealing the internal workings of the home unit. 
 
 [[Check Battery -&gt; missionOneBattery]]
-[[Check Wiring -&gt; missionOneWire]]</tw-passagedata><tw-passagedata pid="19" name=" missionOneWire" tags="" position="1266,909.3333333333334" size="100,100">The wiring looks good.
+[[Check Wiring -&gt; missionOneWire]]</tw-passagedata><tw-passagedata pid="19" name=" missionOneWire" tags="" position="1256,914.3333333333334" size="100,100">The wiring looks good.
 
 
 [[Back -&gt; missionOneScanOpenPanel]]</tw-passagedata><tw-passagedata pid="20" name=" missionOneBattery" tags="" position="975.6666666666669,1002" size="100,100">The battery is drained.
 
 
 [[Replace the battery -&gt; missionOneHomeUnitRepair]]
-[[Back -&gt; missionOneScanOpenPanel]] </tw-passagedata><tw-passagedata pid="21" name=" missionOneHomeUnitRepair" tags="" position="864,1181" size="100,100">{
+[[Back -&gt; missionOneScanOpenPanel]] </tw-passagedata><tw-passagedata pid="21" name=" missionOneHomeUnitRepair" tags="" position="827.3333333333334,1137.6666666666667" size="100,100">{
 (set: $missionOne to true)
 (set: $batteryCount to $batteryCount - 1)
 }
-The [[panel -&gt; missionOneHomeUnit]] switches on, glowing blue as the face of the panel shuts. The Home Unit has been restored. You now have (text-colour:#ff64b1)[&#39;&#39;batteries ($batteryCount)&#39;&#39;].
+The [[panel -&gt; missionOneHomeUnit]] shuts and begins to glow a brilliant blue. The Home Unit has been restored. You now have (text-colour:#ff64b1)[&#39;&#39;batteries ($batteryCount)&#39;&#39;].
 
 {(if: $doorOneUnlock is false)[
 The homeowner&#39;s voice comes through the speaker, (if: $kindness &gt;= 0)[&quot;Thank you for getting us back online. You can see yourself out.&quot;](else:)[&quot;It&#39;s late. Please leave if you&#39;re done.&quot;]]}{
@@ -189,22 +189,22 @@ The homeowner&#39;s voice comes through the speaker, (if: $kindness &gt;= 0)[&qu
 }
 25 ELM STREET
 
-The white Victorian house is out of place among block after block of rowhouses. The house features an ornate wrap around porch. Above the [[Home Unit -&gt; huTwo]] hangs a polished bronze [[plaque-&gt; missionTwoPlaque]].
+After passing block after black of rowhouses the white Victorian sticks out like a sore thumb, even without the blinking yellow offline light. A polished broze [[plaque-&gt; missionTwoPlaque]] hangs above the [[Home Unit -&gt; huTwo]].
 
 
 (if: $badge is true)[[[Scan badge -&gt; missionTwoScan]]]
 [[Knock -&gt; missionTwoKnock]]
 (if: $doorTwoUnlock is true)[[Enter -&gt; missionTwoHouseX]]
-</tw-passagedata><tw-passagedata pid="23" name=" huTwo" tags="" position="2357,181.99999999999994" size="100,100">(if: $missionTwo is false)
+</tw-passagedata><tw-passagedata pid="23" name=" huTwo" tags="" position="2355.3333333333335,181.99999999999994" size="100,100">(if: $missionTwo is false)
 [(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[^^ADDRESS:^^ &#39;&#39;25 Elm Street&#39;&#39;
 ^^UCM Home Unit Model CRP994V^^
-][(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]]]{
+][(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[&#39;&#39;OFFLINE&#39;&#39;]]]]]{
 
 
 }(if: $missionTwo is true)
 [(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[^^ADDRESS:^^ &#39;&#39;25 Elm Street&#39;&#39;
 ^^UCM Home Unit Model CRP994V^^
-][(text-colour:#00a8e4)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;ONLINE&#39;&#39;]]]]]
+][(text-colour:#00a8e4)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[&#39;&#39;ONLINE&#39;&#39;]]]]]
 
 
 {
@@ -215,7 +215,7 @@ Residents: 1
 (if: $doorTwoUnlock is false)[[[&gt;&gt;  Unlock Front Door -&gt; missionTwoUnlock]]]]]]
 
 
-[[Back -&gt; missionTwoStart]] </tw-passagedata><tw-passagedata pid="25" name=" missionTwoKnock" tags="" position="1855.333333333333,461.6666666666671" size="100,100">{
+[[Back -&gt; missionTwoStart]] </tw-passagedata><tw-passagedata pid="25" name=" missionTwoKnock" tags="" position="1855.333333333333,460.0000000000004" size="100,100">{
 (set: $kindness to $kindness + 2)
 (set: $ownerTwoRude to false)
 }
@@ -243,21 +243,22 @@ The deadbolt on the door clicks open.
 The bright blue glow from the Home Unit spills over your shoulders as you exit the rowhouse, casting a tall shadow stretching across the sidewalk and into the street.
 
 
-(t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#f58556)[&#39;&#39;2:15 AM: ONE NEW MESSAGE&#39;&#39;]]
+(t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;2:15 AM: ONE NEW MESSAGE&#39;&#39;]]
 
-(text-colour:#f58556)+(font:&quot;Monospace&quot;)[[[Read-&gt; messageTwo]]]]</tw-passagedata><tw-passagedata pid="28" name=" missionOneArrestBeacon" tags="" position="1079,730.3333333333334" size="100,100">{
+(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Read-&gt; messageTwo]]]]</tw-passagedata><tw-passagedata pid="28" name=" missionOneArrestBeacon" tags="" position="1079,730.3333333333334" size="100,100">{
 (set: $arrestBeacon to false)
 (set: $kindness to -2)
 }
 The Emergency Dispatch Team will arrive at your location as soon as you leave the premises.
 
 
-[[Back -&gt; missionOneHomeUnit]] </tw-passagedata><tw-passagedata pid="29" name=" missionTwoPre" tags="" position="1504.3333333333333,461.6666666666665" size="100,100">(if: $arrestBeacon is false)[The faint sound of approaching sirens blare in the distance.]
+[[Back -&gt; missionOneHomeUnit]] </tw-passagedata><tw-passagedata pid="29" name=" missionTwoPre" tags="" position="1504.3333333333333,461.6666666666665" size="100,100">(if: $arrestBeacon is false)[The faint sound of approaching sirens blare in the distance as you continue walking.] It&#39;s a beautiful sight to see all these glowing blue Home Units. A visual presence of security begets the safety promised and upheld by UCM to millions of people across the country.
 
-[[Keep walking -&gt; missionTwoStart]] </tw-passagedata><tw-passagedata pid="30" name=" messageTwo" tags="" position="1341.9999999999998,1224.6666666666665" size="100,100">(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;Message From Akira:&#39;&#39;
-Good work! 12 Oak Street is back online. Now get going.(if: $arrestBeacon is false)[ The emergency dispatch team should be there any second. I&#39;m not sure the homeowner deserves it but your the Representative on the ground.] We&#39;ve got a busy night ahead of us. I hope you paid attention during training.
 
-The next stop is just around the corner from where you are now. This is the third time we&#39;ve been there this month. Keep your head on a swivel.]
+[[Keep walking -&gt; missionTwoStart]] </tw-passagedata><tw-passagedata pid="30" name=" messageTwo" tags="" position="1340.333333333333,1224.6666666666665" size="100,100">(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;Message From Akira:&#39;&#39;
+Good work! 12 Oak Street is back online.(if: $arrestBeacon is false)[ The emergency dispatch team should be there any second. I&#39;m not sure the homeowner deserves it but your the Representative on the ground.] We&#39;ve got a busy night ahead of us. I hope you paid attention during training.
+
+The next stop is just around the corner. This is the third time we&#39;ve been to this address in the last month. Keep your head on a swivel.]
 
 (t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Close-&gt; missionTwoPre]]]]</tw-passagedata><tw-passagedata pid="31" name=" missionTwoPlaque" tags="" position="2317,58" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[(text-colour:#1a3d79)+(bg:#b77700)[Erected in 1922]]
 
@@ -270,22 +271,22 @@ The next stop is just around the corner from where you are now. This is the thir
 }
 The door opens ajar before the metal chain lock tightens. Edgar shouts from inside, &quot;What are you a barbarian? Hold on a minute.&quot;
 
-The chain jangles as Edgar unlocks the door and swings it open, revealing a portly old man with thinning grey hair. &quot;I know you&#39;re eager to fix your stupid machine, but you can&#39;t just burst into a person&#39;s house in the middle of the night.&quot;
+The chain jangles as Edgar unlocks the door and swings it open. He&#39;s a portly old man wrapped in a worn bathrobe. &quot;I know you&#39;re eager to fix that stupid machine, but you can&#39;t just burst into a person&#39;s house in the middle of the night.&quot;
 
 
 [[Enter -&gt; missionTwoHouse]] </tw-passagedata><tw-passagedata pid="33" name=" missionTwoOwner" tags="" position="2211.9999999999995,446.6666666666671" size="100,100">{
 (set: $kindness to $kindness - 1)
 (set: $ownerTwoRude to true)
 }
-The Home Unit chirps on, &quot;Do you know how much I hate it when you all message me when you&#39;re right outside? Make it snappy.&quot;
+The Home Unit chirps on, &quot;Why do all insist on messaging me when you&#39;re standing right outside? Just knock! It&#39;s late. Hurry up.&quot;
 
 
-[[Enter -&gt; missionTwoHouse]]</tw-passagedata><tw-passagedata pid="34" name=" missionTwoHouse" tags="" position="2063.666666666666,618.333333333334" size="100,100">(if: $ownerTwoRude is true)[&quot;That infernal machine is down the hall and to the left. Make it snappy and get out. It&#39;s late,&quot; says Edgar motioning down a long narrow corridor.]{
+[[Enter -&gt; missionTwoHouse]]</tw-passagedata><tw-passagedata pid="34" name=" missionTwoHouse" tags="" position="2063.666666666666,618.333333333334" size="100,100">(if: $ownerTwoRude is true)[&quot;That infernal machine is down the hall,&quot; says Edgar motioning down a long narrow corridor.]{
 
 
-}(if: $ownerTwoRude is false)[&quot;My unit is down the hall. I can&#39;t ever seem to get that damn thing working,&quot; says Edgar motioning down the long narrow corridor.]
+}(if: $ownerTwoRude is false)[&quot;My Home Unit is down the hall. I can&#39;t ever seem to get that damn thing working,&quot; says Edgar motioning down the long narrow corridor.]
 
-As you approach the [[home unit -&gt; missionTwoHomeUnit]] at the end of the hall the screen lights up.</tw-passagedata><tw-passagedata pid="35" name=" missionTwoHomeUnit" tags="" position="2091.9999999999995,756.6666666666672" size="100,100">(if: $missionTwo is false)[(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]
+As you approach the [[home unit -&gt; missionTwoHomeUnit]] the screen lights up.</tw-passagedata><tw-passagedata pid="35" name=" missionTwoHomeUnit" tags="" position="2091.9999999999995,756.6666666666672" size="100,100">(if: $missionTwo is false)[(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]
 
 [[Scan badge -&gt; missionTwoScanOpenPanel]]]]{
 
@@ -302,33 +303,33 @@ As you approach the [[home unit -&gt; missionTwoHomeUnit]] at the end of the hal
 [[Check Battery -&gt; missionTwoBattery]]
 [[Check Wiring -&gt; missionTwoWire]]</tw-passagedata><tw-passagedata pid="37" name=" missionTwoArrestBeacon" tags="" position="1912.9999999999995,1181.6666666666672" size="100,100">{
 (set: $arrestBeacon to false)
-(set: $kindness to -2)
+(set: $kindness to $kindness - 2)
 }
 The Emergency Dispatch Team will arrive at your location as soon as you leave the premises.
 
-(if: $missionTwoConvo is true)[[[Leave -&gt; missionTwoEnd]]](else:)[[[Back -&gt; missionTwoHomeUnit]]]</tw-passagedata><tw-passagedata pid="38" name=" missionTwoHomeUnitRepair" tags="" position="2445.0000000000005,965.333333333334" size="100,100">{
+(if: $missionTwoConvo is true)[[[Leave -&gt; missionTwoEnd]]](else:)[[[Back -&gt; missionTwoHomeUnit]]]</tw-passagedata><tw-passagedata pid="38" name=" missionTwoHomeUnitRepair" tags="" position="2458.333333333334,950.333333333334" size="100,100">{
 (set: $wireCount to $wireCount - 1)
 (set: $missionTwo to true)
 }
-The [[panel -&gt; missionTwoHomeUnit]] switches on, glowing blue as the face of the panel shuts. You now have [&#39;&#39;wires ($wireCount)&#39;&#39;].
+The panel switches on, glowing blue as the face of the panel shuts. You now have (text-colour:#ff64b1)[&#39;&#39;wires ($wireCount)&#39;&#39;].
 
 (if: $missionTwoConvo is true)[](else:)[[[Ask Edgar about the wires -&gt; missionTwoConvo]]]
 [[Leave -&gt; missionTwoEnd]]
 </tw-passagedata><tw-passagedata pid="39" name=" missionTwoBattery" tags="" position="2044.666666666666,1033.000000000001" size="100,100">The battery looks new.
 
 
-[[Back -&gt; missionTwoScanOpenPanel]]</tw-passagedata><tw-passagedata pid="40" name=" missionTwoWire" tags="" position="2203.666666666666,1023.3333333333342" size="100,100">It looks like one of the wires was cut.
+[[Back -&gt; missionTwoScanOpenPanel]]</tw-passagedata><tw-passagedata pid="40" name=" missionTwoWire" tags="" position="2223.666666666666,1031.6666666666674" size="100,100">It looks like one of the wires was cut.
 
 
 
 [[Replace the wires -&gt; missionTwoHomeUnitRepair]]
-[[Back -&gt; missionTwoScanOpenPanel]] </tw-passagedata><tw-passagedata pid="41" name=" missionTwoConvo" tags="" position="2347.333333333334,1144.000000000001" size="100,100">{
+[[Back -&gt; missionTwoScanOpenPanel]] </tw-passagedata><tw-passagedata pid="41" name=" missionTwoConvo" tags="" position="2354.0000000000005,1157.3333333333342" size="100,100">{
 (set: $missionTwoConvo to true)
 }
-(if: $ownerTwoRude is true)[&quot;You&#39;re not suggesting I cut the wire, are you? That&#39;s a serious allegation. The house is lousy with mice. One probably got in,&quot; says Edgar.]{
+(if: $ownerTwoRude is true)[&quot;You&#39;re not suggesting I cut the wire, are you? I might not like the thing but that&#39;s a serious allegation,&quot; says Edgar. &quot;The house is lousy with mice. One probably got in and chewed it.&quot;]{
 
 
-}(if: $ownerTwoRude is false)[&quot;Cut you say? That&#39;s odd. Maybe a mouse got into the wall. The house is lousy with them,&quot; says Edgar.]
+}(if: $ownerTwoRude is false)[&quot;Cut you say? That&#39;s odd,&quot; says Edgar.]
 
 
 {
@@ -341,79 +342,76 @@ The [[panel -&gt; missionTwoHomeUnit]] switches on, glowing blue as the face of 
 }
 25 ELM STREET
 
-(if: $ownerTwoRude is true)[&quot;You know where the door is,&quot; says Edgar motioning towards the door. Once you leave he slams the door behind you.]{
+(if: $ownerTwoRude is true)[&quot;You know where the door is,&quot; says Edgar motioning down the hall. As you leave the door slams shut behind you.]{
 
 }(if: $ownerTwoRude is false)[Edgar walks you to the front door. &quot;Thanks for coming by,&quot; he says as he closes the door behind you.]
 
-The blue light from the Home Unit glows in the darkness. (if: $arrestBeacon is false)[No sooner do you step down off the porch than police cars come zooming around the corner, sirens blaring.]
+The blue light from the Home Unit illuminates the wrap around porch of the old Victorian house. (if: $arrestBeacon is false)[No sooner do you step onto the sidewalk than police cars come zooming around the corner, sirens blaring.]
 
 
 (t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;2:31 AM: ONE NEW MESSAGE&#39;&#39;]]
 
 (text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Read-&gt; messageThree]]]]</tw-passagedata><tw-passagedata pid="43" name=" messageThree" tags="" position="2649.666666666667,1347.0000000000007" size="100,100">(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;Message From Akira:&#39;&#39;
-25 Elm Street is back online.(if: $arrestBeacon is false)[ Good thinking calling the emergency dispatch. Three visits in a month in and of itself deserves to have that homeowner arrested.](else:)[ You should have called in an arrest beacon on that jackass. Three visits in a month is a waste of our time. You&#39;d had for anyone to think that you&#39;re anti-UCM.] Now get to 106 Birch Street ASAP.]
+25 Elm Street is back online.(if: $arrestBeacon is false)[ Good thing you called the emergency response team. Three visits in a month! That old codger had it coming.](else:)[ You should have called in an arrest beacon on that jackass. Three visits in a month is a waste of company time. Now get to 106 Birch Street ASAP.]
 
-(t8n:&quot;fade&quot;)+(t8n-delay:5s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Close-&gt; missionThreePre]]]]</tw-passagedata><tw-passagedata pid="44" name=" missionThreePre" tags="" position="2758.0000000000005,602.333333333334" size="100,100">[[Keep walking -&gt; missionThreeStart]]</tw-passagedata><tw-passagedata pid="45" name=" missionThreeStart" tags="" position="3191.333333333334,147.33333333333405" size="100,100">{
+(t8n:&quot;fade&quot;)+(t8n-delay:5s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Close-&gt; missionThreePre]]]]]</tw-passagedata><tw-passagedata pid="44" name=" missionThreePre" tags="" position="2758.0000000000005,602.333333333334" size="100,100">[[Keep walking -&gt; missionThreeStart]]</tw-passagedata><tw-passagedata pid="45" name=" missionThreeStart" tags="" position="3189.6666666666674,145.6666666666674" size="100,100">{
 (set: $doorThreeUnlock to false)
 (set: $arrestBeacon to true)
-(set: $missionThreeScan to 0)
+(set: $kindness to -4)
+(set: $badge to true)
 }
 106 BIRCH STREET
 
-The dilapidated rowhouse has seen better days. The cracked [[Home Unit -&gt; huThree]] glows yellow. 
+The dilapidated rowhouse has seen better days. The paint is chipping off the wooden shutters and leaves pile up around the front door. The cracked [[Home Unit -&gt; huThree]] glows in the darkness. 
 
 
 (if: $badge is true)[[[Scan badge -&gt; missionThreeScan]]]
 [[Knock -&gt; missionThreeKnock]]
-(if: $missionThreeScan &gt; 2)[[Break the door -&gt; missionThreeHouse]]</tw-passagedata><tw-passagedata pid="46" name=" huThree" tags="" position="3366.3333333333344,137.33333333333408" size="100,100">(if: $missionThree is false)
+(if: $missionThreeScan &gt;= 1)[[Break the door -&gt; missionThreeHouse]]</tw-passagedata><tw-passagedata pid="46" name=" huThree" tags="" position="3363.000000000001,137.33333333333408" size="100,100">(if: $missionThree is false)
 [(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[^^ADDRESS:^^ &#39;&#39;106 Birch Street&#39;&#39;
 ^^UCM Home Unit Model XTX000Q^^
-][(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]]]{
+][(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[&#39;&#39;OFFLINE&#39;&#39;]]]]]{
 
 
 }(if: $missionThree is true)
 [(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[^^ADDRESS:^^ &#39;&#39;106 Elm Street&#39;&#39;
 ^^UCM Home Unit Model XTX000Q^^
-][(text-colour:#00a8e4)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;ONLINE&#39;&#39;]]]]]
+][(text-colour:#00a8e4)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[&#39;&#39;ONLINE&#39;&#39;]]]]]
 
 
 {
 [[Back -&gt; missionThreeStart]]
 }
-</tw-passagedata><tw-passagedata pid="47" name=" missionThreeScan" tags="" position="3149.6666666666674,369.0000000000007" size="100,100">{
+</tw-passagedata><tw-passagedata pid="47" name=" missionThreeScan" tags="" position="3033.000000000001,399.0000000000007" size="100,100">{
 (set: $missionThreeScan to $missionThreeScan + 1)
-(if: $kindness &lt; -4)[(set: $missionThreeBomb to true)]
+(if: $kindness &lt;= -4)[(set: $missionThreeBomb to true)]
 }
 
-(if: $missionThreeBomb is true)[(if: $missionThreeScan &lt; 2)[The panel beeps.
+(if: ($missionThreeBomb is true) and ($missionThreeScan &lt; 2))[The panel beeps.
 
 
 [[Back -&gt; missionThreeStart]]]{
 
 
-}(if: $missionThreeScan &gt; 2)[The panel begins to beep rapidly. Then...&lt;!--insert explosion text switch--&gt;
+
+}(if: ($missionThreeBomb is true) and ($missionThreeScan &gt;= 2))[The panel begins to beep rapidly. Then...(click-replace: &quot;Then...&quot;) [[[BOOM! -&gt; BombEnd]]]]{
 
 
 
-[[GameOver -&gt; GameOver]]]{
+}
+(if: $kindness &gt; -4)[(set: $missionThreeBomb to false)][The panel beeps.
 
-}(else:)[The panel beeps.
 
-
-[[Back -&gt; missionThreeStart]]]</tw-passagedata><tw-passagedata pid="48" name=" missionThreeKnock" tags="" position="3361.3333333333344,292.33333333333405" size="100,100">On the other side of the door you hear frantic shuffling. Then the door opens.
+[[Back -&gt; missionThreeStart]]]</tw-passagedata><tw-passagedata pid="48" name=" missionThreeKnock" tags="" position="3359.666666666668,304.00000000000074" size="100,100">On the other side of the door you hear frantic shuffling. Then the door opens.
 
 &quot;You must be here about the Home Unit. Please. come in,&quot; says the unidentified homeowner.
 
 
 
-[[Enter -&gt; missionThreeHouse]] </tw-passagedata><tw-passagedata pid="49" name=" missionThreeHouse" tags="" position="3303.000000000001,459.0000000000008" size="100,100">(if: $missionThreeScan &gt; 2)[You burst through the door. All is silent in the house. (t8n: &quot;fade&quot;)+(t8n-delay:2s)[Then...]
+[[Enter -&gt; missionThreeHouse]] </tw-passagedata><tw-passagedata pid="49" name=" missionThreeHouse" tags="" position="3208.000000000001,430.6666666666674" size="100,100">(if: $missionThreeBomb is true)[You burst through the door into the dark entryway. (t8n: &quot;fade&quot;)+(t8n-delay:2s)[Then...](click-replace: &quot;Then...&quot;) [[[BOOM! -&gt; BombEnd]]]]{
 
 
-
-[[GameOver -&gt; GameOver]]]{
-
-
-}(else:)[The house is dark and quiet except for the yellow glow of the [[Home Unit -&gt; missionThreeHomeUnit]]. &quot;There&#39;s nothing to see here. Probably just a power short.&quot;]</tw-passagedata><tw-passagedata pid="50" name=" GameOver" tags="" position="3126.333333333334,572.333333333334" size="100,100">Restart</tw-passagedata><tw-passagedata pid="51" name=" missionThreeHomeUnit" tags="" position="3312.000000000001,742.0000000000006" size="100,100">(if: $missionThree is false)[(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]
+}(else:)[The house is dark except for the yellow glow of the [[Home Unit -&gt; missionThreeHomeUnit]] by the entrance. &quot;There&#39;s nothing to see here. Probably just a power short.&quot;]</tw-passagedata><tw-passagedata pid="50" name=" BombEnd" tags="" position="3098.000000000001,589.0000000000008" size="100,100">You have been killed by a homemade bomb built from Home Unit parts.</tw-passagedata><tw-passagedata pid="51" name=" missionThreeHomeUnit" tags="" position="3312.000000000001,742.0000000000006" size="100,100">(if: $missionThree is false)[(font: &quot;Monospace&quot;)[(text-style:&quot;smear&quot;)[(text-colour:#ffd200)[(text-style:&quot;smear&quot;)+(text-style:&quot;blink&quot;)[#&#39;&#39;OFFLINE&#39;&#39;]]]
 
 [[Scan badge -&gt; missionThreeScanOpenPanel]]]]{
 
@@ -425,10 +423,14 @@ The dilapidated rowhouse has seen better days. The cracked [[Home Unit -&gt; huT
 (click-replace: &quot;Call Arrest Beacon&quot;)
 [[[Are you sure? -&gt; missionThreeArrestBeacon]]]]
 }
-[[Close Home Unit -&gt; missionThreeHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="52" name=" missionThreeScanOpenPanel" tags="" position="3271.6666666666674,885.0000000000005" size="100,100">The panel on the wall lifts open revealing the internal workings of the home unit. 
+[[Close Home Unit -&gt; missionThreeHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="52" name=" missionThreeScanOpenPanel" tags="" position="3271.6666666666674,885.0000000000005" size="100,100">{
+(set: $missionThreeWire to false)
+(set: $missionThreeBattery to false)
+}
+The panel on the wall lifts open revealing the internal workings of the home unit. 
 
 [[Check Battery -&gt; missionThreeBattery]]
-[[Check Wiring -&gt; missionThreeWire]]</tw-passagedata><tw-passagedata pid="53" name=" missionThreeArrestBeacon" tags="" position="3616.666666666668,829.3333333333338" size="100,100">{
+[[Check Wiring -&gt; missionThreeWire]]</tw-passagedata><tw-passagedata pid="53" name=" missionThreeArrestBeacon" tags="" position="3733.3333333333344,806.0000000000005" size="100,100">{
 (set: $arrestBeacon to false)
 }
 The Emergency Dispatch Team will arrive at your location as soon as you leave the premises.
@@ -452,18 +454,16 @@ The Emergency Dispatch Team will arrive at your location as soon as you leave th
 (if: $missionThreeWire is false)[The Home Unit is still offline.
 
 
-
 [[Check wires -&gt; missionThreeWire]]]{
 
 }(else:)[The Home Unit is online.
 
 
-[[Next -&gt; missionThreeHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="57" name=" missionThreeWireFix" tags="" position="3147.666666666667,1253.333333333334" size="100,100">{
+[[Next -&gt; missionThreeHomeUnitRepair]]]</tw-passagedata><tw-passagedata pid="57" name=" missionThreeWireFix" tags="" position="3129.3333333333335,1256.6666666666672" size="100,100">{
 (set: $missionThreeWire to true)
 (set: $wireCount to $wireCount - 1)
 }
 (if: $missionThreeBattery is false)[The Home Unit is still offline.
-
 
 
 [[Check battery -&gt; missionThreeBattery]]]{
@@ -471,7 +471,7 @@ The Emergency Dispatch Team will arrive at your location as soon as you leave th
 }(else:)[The Home Unit is online.
 
 
-[[Next -&gt; missionThreeHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="58" name=" missionThreeHomeUnitRepair" tags="" position="3707.0000000000005,1098.0000000000005" size="100,100">{
+[[Next -&gt; missionThreeHomeUnitRepair]]]</tw-passagedata><tw-passagedata pid="58" name=" missionThreeHomeUnitRepair" tags="" position="3743.666666666667,1089.6666666666672" size="100,100">{
 (set: $missionThree to true)
 }
 The Home Unit illuminates the hallways with it&#39;s cool blue light. &quot;Oh good, it&#39;s back online,&quot; says the unidentified homeowner.
@@ -502,16 +502,18 @@ The Home Unit illuminates the hallways with it&#39;s cool blue light. &quot;Oh g
 }
 106 BIRCH STREET
 
-&quot;Be careful out there. I hear there&#39;s some real lunatics out on the streets at this hour,&quot; says the unidentifed homeowner as they close the door.
+&quot;Be careful out there. I hear there&#39;s some real lunatics on the streets at this hour,&quot; says the unidentifed homeowner as they close the door.
 
 
 (t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;2:44 AM: ONE NEW MESSAGE&#39;&#39;]]
 
 (text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Read-&gt; messageFour]]]]
-</tw-passagedata><tw-passagedata pid="62" name=" messageFour" tags="" position="4189.666666666668,1250.6666666666672" size="100,100">(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;Message From Akira:&#39;&#39;
-Good work! 12 Oak Street is back online. Now get going.(if: $arrestBeacon is false)[It’s a good thing you called in an emergency response team. We just got word that the homeowner was planning on building a bomb! Can’t trust anyone these days…]] 
+</tw-passagedata><tw-passagedata pid="62" name=" messageFour" tags="" position="4166.333333333335,1250.6666666666672" size="100,100">(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;Message From Akira:&#39;&#39;
+(if: $arrestBeacon is false)[106 Birch Street is back online. It’s a good thing you called in an emergency response team. We just got word that the homeowner was planning on building a bomb! Can’t trust anyone these days…]]{
 
-(t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Close-&gt; missionFourPre]]]]</tw-passagedata><tw-passagedata pid="63" name=" missionFourPre" tags="" position="4378.000000000001,600.6666666666672" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+}(if: $arrestBeacon is true)[106 Birch Street is back online. ]
+
+(t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[Close-&gt; missionFourPre]]]]</tw-passagedata><tw-passagedata pid="63" name=" missionFourPre" tags="" position="4338.000000000001,604.0000000000006" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
