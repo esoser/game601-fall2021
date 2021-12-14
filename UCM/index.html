@@ -192,7 +192,7 @@ The homeowner&#39;s voice comes through the speaker, (if: $kindness &gt;= 0)[&qu
 }
 25 ELM STREET
 
-After passing block after black of rowhouses the white Victorian sticks out like a sore thumb, even without the blinking yellow offline light. A polished bronze [[plaque-&gt; missionTwoPlaque]] hangs above the [[Home Unit -&gt; huTwo]].
+After passing block after block of rowhouses the white Victorian sticks out like a sore thumb, even without the blinking yellow offline light. A polished bronze [[plaque-&gt; missionTwoPlaque]] hangs above the [[Home Unit -&gt; huTwo]].
 
 
 (if: $badge is true)[[[Scan badge -&gt; missionTwoScan]]]
@@ -264,12 +264,12 @@ The next stop is just around the corner. This is the third time we&#39;ve been t
 (t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; missionTwoPre]]]]</tw-passagedata><tw-passagedata pid="31" name=" missionTwoPlaque" tags="" position="2718,232" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[(text-colour:#1a3d79)+(bg:#b77700)[Erected in 1922]]
 
 
-[[Back -&gt; missionTwoStart]]</tw-passagedata><tw-passagedata pid="32" name=" missionTwoHouseX" tags="" position="2424,650" size="100,100">{
+[[Back -&gt; missionTwoStart]]</tw-passagedata><tw-passagedata pid="32" name=" missionTwoHouseX" tags="" position="2423,650" size="100,100">{
 (set: $kindness to $kindness - 3)
 (set: $ownerTwoRude to true)
 (set: $doorTwoUnlock to true)
 }
-The door opens ajar before the metal chain lock tightens. Edgar shouts from inside, &quot;What are you a barbarian? Hold on a minute.&quot;
+The door opens ajar before the metal chain lock tightens. Edgar shouts from inside, &quot;What are you, a barbarian? Hold on a minute.&quot;
 
 The chain jangles as Edgar unlocks the door and swings it open. He&#39;s a portly old man wrapped in a worn bathrobe. &quot;I know you&#39;re eager to fix that stupid machine, but you can&#39;t just burst into a person&#39;s house in the middle of the night.&quot;
 
@@ -309,7 +309,7 @@ The panel on the wall lifts open revealing the internal workings of the home uni
 }
 The Emergency Dispatch Team will arrive at your location as soon as you leave the premises.
 
-(if: $missionTwoConvo is true)[[[Leave -&gt; missionTwoEnd]]](else:)[[[Back -&gt; missionTwoHomeUnit]]]</tw-passagedata><tw-passagedata pid="38" name=" missionTwoHomeUnitRepair" tags="" position="2855,1118" size="100,100">{
+(if: $missionTwoConvo is true)[[[Leave -&gt; missionTwoEnd]]](else:)[[[Back -&gt; missionTwoHomeUnit]]]</tw-passagedata><tw-passagedata pid="38" name=" missionTwoHomeUnitRepair" tags="" position="2859,1198" size="100,100">{
 (set: $wireCount to $wireCount - 1)
 (set: $missionTwo to true)
 }
@@ -357,9 +357,9 @@ The blue light from the Home Unit illuminates the wrap around porch of the old V
 (font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;MESSAGE FROM AKIRA:&#39;&#39;
 25 Elm Street is back online.(if: $arrestBeacon is false)[ Good thing you called the emergency response team. Three visits in a month! That old codger had it coming if you ask me.](else:)[ You should have called in an arrest beacon on that jackass. Three visits in a month is worthy in my book.]
 
-(t8n:&quot;fade&quot;)+(t8n-delay:5s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; missionThreePre]]]]]</tw-passagedata><tw-passagedata pid="44" name=" missionThreePre" tags="" position="3097,678" size="100,100">{
+(t8n:&quot;fade&quot;)+(t8n-delay:5s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; missionThreePre]]]]]</tw-passagedata><tw-passagedata pid="44" name=" missionThreePre" tags="" position="3096,678" size="100,100">{
 }
-Just the other day you read on the UCM Bulletin that crime is down 300% since mass adoption of the network. If that&#39;s not proof that the system works, what could be? 
+It&#39;s inspiring seeing all the blue UCM lights, knowing you&#39;re in part responsible for the safety and security of the entire neighborhooid. Just the other day you read on the UCM Bulletin that crime is down 300% since mass adoption of the network. If that&#39;s not proof that the system works, what could be? 
 
 
 [[Keep walking -&gt; missionThreeStart]]</tw-passagedata><tw-passagedata pid="45" name=" missionThreeStart" tags="" position="3705,317" size="100,100">{
@@ -428,7 +428,7 @@ On the other side of the door you hear frantic shuffling. Then the door opens.
 (if: ($missionThreeBomb is true) and ($missionThreeKnock is false))[You burst through the door into the dark entryway. (t8n: &quot;fade&quot;)+(t8n-delay:2s)[Then...](click-replace: &quot;Then...&quot;) [[[BOOM! -&gt; BombEnd]]]]{
 
 
-}(if: ($missionThreeBomb is false) and ($missionThreeKnock is false))[You burst through the door into the dark entryway. In the darkness you hear frantic scrambling. The house is dark except for the yellow glow of the [[Home Unit -&gt; missionThreeHomeUnit]] down at the back of the house.]{ 
+}(if: ($missionThreeBomb is false) and ($missionThreeKnock is false))[You burst through the door into the dark entryway. In the darkness you hear frantic shuffling as the homeowner disappears into one of the dark rooms of the house. The [[Home Unit -&gt; missionThreeHomeUnit]] flashes yellow down the hall at the back of the house.]{ 
 
 }(if: $missionThreeKnock is true)[&quot;There&#39;s nothing to see here. Probably just a power short,&quot; says  (if: $missionThreeID is true)[Sylvester](else:)[the unidentified homeowner] as he leads you down a long cramped hallway. &quot;The wiring in this place is crazy. But like I said, I just moved in so I don&#39;t know what&#39;s going on.&quot;
 
@@ -448,7 +448,7 @@ You have been killed in an IED explosion. Ballistics found the bomb was built fr
 (click-replace: &quot;Call Arrest Beacon&quot;)
 [[[Are you sure? -&gt; missionThreeArrestBeacon]]]]
 }
-[[Close Home Unit -&gt; missionThreeHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="52" name=" missionThreeScanOpenPanel" tags="" position="3718,807" size="100,100">{
+[[Close Home Unit -&gt; missionThreeHomeUnitRepair]]]]</tw-passagedata><tw-passagedata pid="52" name=" missionThreeScanOpenPanel" tags="" position="3716,819" size="100,100">{
 (set: $missionThreeWire to false)
 (set: $missionThreeBattery to false)
 }
@@ -500,7 +500,7 @@ The wires have been removed from the Home Unit.
 [[Next -&gt; missionThreeHomeUnitRepair]]]</tw-passagedata><tw-passagedata pid="58" name=" missionThreeHomeUnitRepair" tags="" position="3900,1395" size="100,100">{
 (set: $missionThree to true)
 }
-The Home Unit illuminates the hallway with a cool blue glow. (if: $missionThreeKnock is true)[&quot;Oh good, it&#39;s back online,&quot; says (if: $missionThreeID is true)[Sylvester.](else:)[the unidentified homeowner.]]
+The Home Unit floods the hallway with a cool blue glow. (if: $missionThreeKnock is true)[&quot;Oh good, it&#39;s back online,&quot; says (if: $missionThreeID is true)[Sylvester.](else:)[the unidentified homeowner.]]
 
 
 [[Leave -&gt; missionThreeEnd]]
@@ -544,10 +544,10 @@ It&#39;s looking like this may be your last stop of the night. Wrap this next on
 
 (t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; missionFourPre]]]]</tw-passagedata><tw-passagedata pid="63" name=" missionFourPre" tags="" position="4519,731" size="100,100">
 (if: $arrestBeacon is false)
-[Down the block you spot a green light from a Home Unit panel spilling into the street.]
+[Down the block you spot a green light from a Home Unit panel spilling into the street.
 
 
-[[Walk towards the light -&gt; missionFourStart]]{
+[[Walk towards the light -&gt; missionFourStart]]]{
 
 
 }(if: $arrestBeacon is true)
@@ -564,7 +564,7 @@ A van labeled with &#39;&#39;UCM&#39;&#39; in bold lettering on the side door sc
 The battery has been changed. The Home Unit is back online.
 
 
-[[Close the panel -&gt; missionOneHomeUnitRepair]] </tw-passagedata><tw-passagedata pid="65" name=" missionFourStart" tags="" position="5836,340" size="100,100">{
+[[Close the panel -&gt; missionOneHomeUnitRepair]] </tw-passagedata><tw-passagedata pid="65" name=" missionFourStart" tags="" position="5835,340" size="100,100">{
 (set: $arrestBeacon to true)
 }
 92 CYPRESS STREET
@@ -586,7 +586,6 @@ The pristine rowhouse is the cleanest on the block. Two rose bushes in full bloo
 
 {
 (if: $missionFour is false)[[[Back -&gt; missionFourStart]]]
-(if: $missionFour is true)[[[Back -&gt; 
 }</tw-passagedata><tw-passagedata pid="67" name=" kidnappingKnockOut" tags="" position="5140,799" size="100,100">{
 (set: $fightingKidnap to true)
 (set: $interrogation to $interrogation - 1)
@@ -623,9 +622,9 @@ The shadowy figure bursts forward from the darkness, &quot;Don&#39;t get cute wi
 (set: $interrogation to $interrogation + 1)
 (set: $device to true)
 }
-(if: $interrogation &gt;= 1)[&quot;Now that&#39;s a good neighborhood Rep. All you need to do is use this battery at your next stop,&quot; says the Interrogator through a wide grin.]{
+(if: $interrogation &gt;= 1)[&quot;Now that&#39;s a good neighborhood Rep. All you need to do is use this battery at your next stop and all will be forgiven,&quot; says the Interrogator through a wide grin.]{
 
-}(else:)[&quot;Took you long enough to come around. Just replace the battery with this at your next stop,&quot; says the Interrogator through a wide grin.]
+}(else:)[&quot;Took you long enough to come around. Just replace the battery with this at your next stop. All will be forgiven if you can do that for me,&quot; says the Interrogator through a wide grin.]
 
 
 [[Whatever you need. -&gt; missionFourDetour1]]
@@ -648,9 +647,9 @@ The shadowy figure bursts forward from the darkness, &quot;Don&#39;t get cute wi
 }
 &quot;(if: $device is true)[Just when I thought we were getting along. Has anyone ever told you that you ask too many questions?](else:)[] Get this asshole out of here,&quot; says the Interrogator as he falls back into the shadows.
 
-The two guards flanking you grab you by your arms and hoist you to your feet. Then...(click-replace: &quot;Then...&quot;)[[[WHACK! -&gt; prisonEnd2]]]</tw-passagedata><tw-passagedata pid="75" name=" missionFourDetour1" tags="" position="5286,706" size="100,100">{
+The guards grab you by your arms and hoist you to your feet. Then...(click-replace: &quot;Then...&quot;)[[[WHACK! -&gt; prisonEnd2]]]</tw-passagedata><tw-passagedata pid="75" name=" missionFourDetour1" tags="" position="5286,706" size="100,100">{
 }
-(t8n: &quot;fade&quot;)+(t8n-delay: 2s)[The security guards escort you down a long corridor towards a large metal door. Blinding like fills the hall as the door scrapes across the concrete floor as they pull it open.
+(t8n: &quot;fade&quot;)+(t8n-delay: 2s)[The security guards escort you down a long corridor towards a large metal door. Blinding light fills the hall as the door opens, scraping across the concrete floor.
 
 They push you out of the door.]
 
@@ -722,7 +721,7 @@ Where the hell have you been? You&#39;ve been offline for over an hour! Let&#39;
 The panel on the wall lifts open revealing the internal workings of the home unit. 
 
 
-[[Check Battery -&gt; missionFourBattery]]
+[[Check the battery -&gt; missionFourBattery]]
 [[Check the wires -&gt; missionFourWire]]</tw-passagedata><tw-passagedata pid="85" name=" missionFourArrestBeacon" tags="" position="6209,1352" size="100,100">{
 (set: $arrestBeacon to false)
 (set: $kindness to $kindness - 2)
@@ -734,8 +733,8 @@ The Emergency Dispatch Team will arrive at your location as soon as you leave th
 The battery is unlike any you&#39;ve seen before. At the center of the cell is a bright glowing [[core -&gt; batteryCore]]. 
 
 
-(if: $device is true)[[[Replace with device -&gt; missionFourHomeUnitDeviceSwap]]]
 (if: $awakened is true)[[[Dismantle the machine -&gt; missionFourDismantle]]]
+(if: $device is true)[[[Replace with device -&gt; missionFourHomeUnitDeviceSwap]]]
 [[Replace with new battery -&gt; missionFourHomeUnitBatterySwap]]
 [[Back -&gt; missionFourScanOpenPanel]]</tw-passagedata><tw-passagedata pid="87" name=" missionFourWire" tags="" position="5719,1430" size="100,100">
 The wires look good.
@@ -749,15 +748,17 @@ The wires look good.
 Join the resistance!]
 
 
-[[Back -&gt; missionFourHomeUnit]] </tw-passagedata><tw-passagedata pid="89" name=" missionFourConvo" tags="" position="6242,1970" size="100,100">{
+[[Back -&gt; missionFourHomeUnit]] </tw-passagedata><tw-passagedata pid="89" name=" missionFourConvo" tags="" position="6265,2036" size="100,100">{
 (set: $missionFourConvo to true)
 }
-&quot;(if: $awakened is true)[This UCM situation isn&#39;t all it&#39;s cracked up to be, you know. ]I take it you&#39;re new to this line of work,&quot; Phyllis says before taking a slow drag from a cigarette.
+The panel switches on, glowing blue as the face of the panel shuts. Phyllis lights a cigarette at the other end of the hall.
+
+&quot;(if: $awakened is true)[This UCM situation isn&#39;t all it&#39;s cracked up to be, you know. ]I take it you&#39;re new to this line of work,&quot; she says before taking a slow drag from the cigarette.
 
 
-[[It&#39;s not what I thought it would be. -&gt; theyAllSayThat]]
 (if: $device is false)[[[That&#39;s not your concern. -&gt; deviceFalse]]]{
 }(if: $device is true)[[[I&#39;m just here to do my job. -&gt; deviceTrue]]]
+[[It&#39;s not what I thought it would be. -&gt; theyAllSayThat]]
 </tw-passagedata><tw-passagedata pid="90" name=" missionFourHomeUnitBatterySwap" tags="" position="5749,1813" size="100,100">{
 (set: $missionFour to true)
 (set: $batteryCount to $batteryCount - 1)
@@ -773,7 +774,7 @@ The Home Unit is online.
 The Home Unit is online and ready for detonation upon your departure from the premises.
 
 
-[[Next -&gt; missionFourConvo]]</tw-passagedata><tw-passagedata pid="92" name=" missionThreeID" tags="" position="3978,506" size="100,100">{
+[[Close the panel -&gt; missionFourConvo]]</tw-passagedata><tw-passagedata pid="92" name=" missionThreeID" tags="" position="3978,506" size="100,100">{
 (set: $missionThreeID to true)
 }
 &quot;Oh, yes. Of course. Uh, I just moved in and the Home Unit was down when I got here. I&#39;m Sylvester. C&#39;mon in.&quot;
@@ -808,9 +809,9 @@ You tear the wires out of the Home Unit and smash the battery on the floor.
 
 (text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageDismantle]]]]</tw-passagedata><tw-passagedata pid="97" name=" missionFourUnitDescription" tags="" position="5811,985" size="100,100">{
 }
-Floorboard creak beneath your feet as you approach the Home Unit. A deep hum reverberates through your chest as the green glow of the [[panel -&gt; missionFourHomeUnit]] envelops you.</tw-passagedata><tw-passagedata pid="98" name=" deviceFalse" tags="" position="5776,2133" size="100,100">{
+Floorboard creak beneath your feet as you approach the Home Unit. A deep hum reverberates through your chest as the green glow for the [[panel -&gt; missionFourHomeUnit]] envelops you.</tw-passagedata><tw-passagedata pid="98" name=" deviceFalse" tags="" position="5842,2214" size="100,100">{
 }
-&quot;Is that so? I think I have a right to know what you qualifications are,&quot; snaps Phyllis. She puffs on her cigarette. &quot;I&#39;m sorry. Thank you for fixing the unit. You can go now.&quot;
+&quot;Is that so? I think I have a right to know what you qualifications are,&quot; snaps Phyllis. She puffs on her cigarette. &quot;Thank you for fixing the unit. You can go now.&quot;
 
 
 [[Leave -&gt; missionFourEnd2]]</tw-passagedata><tw-passagedata pid="99" name=" deviceTrue" tags="" position="6311,2304" size="100,100">{
@@ -826,12 +827,12 @@ Floorboard creak beneath your feet as you approach the Home Unit. A deep hum rev
 The door slams shut behind you followed by the thud of the deadbolt. The Home Unit panel glows blue, just as it should. 
 
 
-[[Walk down the street -&gt; missionFourArrest]]</tw-passagedata><tw-passagedata pid="101" name=" theyAllSayThat" tags="" position="6548,2165" size="100,100">{
+[[Walk down the street -&gt; missionFourArrest]]</tw-passagedata><tw-passagedata pid="101" name=" theyAllSayThat" tags="" position="6548,2166" size="100,100">{
 }
-&quot;That&#39;s what they all say. Turns out things get a bit complicated when you&#39;re in every home across the country. Going into stranger&#39;s houses unannounced in the name of safety,&quot; Phyllis takes a drag from her cigarette. &quot;And I thought you were coming here tonight to assassinate me! In any event. Have a good rest of your night!&quot;
+&quot;That&#39;s what they all say. Turns out things get a bit complicated when you&#39;re in every home across the country. Going into stranger&#39;s houses unannounced in the name of safety,&quot; Phyllis takes a drag from her cigarette. (if: $device is true)[&quot;And I thought you were coming here tonight to assassinate me! In any event. Have a good rest of your night! I know I will.&quot;](if: $device is false)[&quot;You all just think you can waltz in here and do whatever you want. I think it&#39;s time you left.&quot;](else:)[&quot;In any event. Have yourself a good night.]
 
 
-[[Leave -&gt; missionFourEnd3]]</tw-passagedata><tw-passagedata pid="102" name=" tooComplex" tags="" position="6250,2506" size="100,100">{
+[[Leave -&gt; missionFourEnd3]]</tw-passagedata><tw-passagedata pid="102" name=" tooComplex" tags="" position="6250,2507" size="100,100">{
 }
 &quot;What good is safety without liberty? We are all under the thumb of UCM Corp. (if: $arrestBeacon is false)[You just happen to have the uniform to prove it. You can leave now,]&quot; says Phyllis with a wry smile.
 
@@ -845,14 +846,14 @@ The door slams shut behind you followed by the thud of the deadbolt. The Home Un
 
 [[Walk down the street -&gt; missionFourExplosion]]</tw-passagedata><tw-passagedata pid="104" name=" missionFourExplosion" tags="" position="5765,2616" size="100,100">{
 }
-There&#39;s a bright flash following by an ear piercing ringing. The force of the explosion from 92 Cypress Street knocks you forward.
+There&#39;s a bright flash followed by an ear piercing ringing. The force of the explosion from 92 Cypress Street knocks you forward.
 
-You look back at the rubble of the beautiful rowhouse, rosebushes aflame.
+You look back at the rubble where the rowhouse once stood, rosebushes aflame.
 
 
 (t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;4:15 AM: ONE NEW MESSAGE&#39;&#39;]]
 
-(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageSix]]]]</tw-passagedata><tw-passagedata pid="105" name=" messageSix" tags="" position="5765,2766" size="100,100">
+(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageSix]]]]</tw-passagedata><tw-passagedata pid="105" name=" messageSix" tags="" position="5765,2767" size="100,100">
 (font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;MESSAGE FROM AKIRA:&#39;&#39;
 Holy shit! Are you okay!? I just saw that there was an explosion at 92 Cypress Street. 
 
@@ -860,12 +861,12 @@ Well, if you&#39;re alive you should get home and rest up. Your next shift start
 
 }
 
-(t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; explosiveEnding]]]]</tw-passagedata><tw-passagedata pid="106" name=" explosiveEnding" tags="" position="5768,2967" size="100,100">{
+(t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; explosiveEnding]]]]</tw-passagedata><tw-passagedata pid="106" name=" explosiveEnding" tags="" position="5834,2924" size="100,100">{
 }
-Firetrucks blur past you as you walk home to your apartment, encircling the rowhouse in a matter of minutes. The blaring sirens grow faint as you turn the corner onto another street lined with Home Units and into the darkness.
+Firetrucks blur past you towards the site of the explosion as you walk home. The blaring sirens grow faint as you turn the corner and into the darkness.
 
 
-(t8n: &quot;fade&quot;)+(t8n-delay: 4s)[[[The End -&gt; restart]]]</tw-passagedata><tw-passagedata pid="107" name=" missionFourArrest" tags="" position="6562,2651" size="100,100">{
+(t8n: &quot;fade&quot;)+(t8n-delay: 4s)[[[The End -&gt; restart]]]</tw-passagedata><tw-passagedata pid="107" name=" missionFourArrest" tags="" position="6600,2587" size="100,100">{
 }
 (if: $arrestBeacon is false)[You reach the end of the road and look back as emergency response vehicles encircle the rowhouse]. As you turn the corner and 92 Cypress Street disappears from view, a white van with the UCM Corp. logo printed on the side comes screeching to a halt beside you.
 
@@ -879,12 +880,21 @@ The door slams shut behind you followed by the thud of the deadbolt. The Home Un
 
 (t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;4:15 AM: ONE NEW MESSAGE&#39;&#39;]]
 
-(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageSeven]]]]</tw-passagedata><tw-passagedata pid="109" name=" missionFourJustEnds" tags="" position="6940,2658" size="100,100">{
+(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageSeven]]]]</tw-passagedata><tw-passagedata pid="109" name=" missionFourJustEnds" tags="" position="7027,2860" size="100,100">{
 }
-You continue on your way home in the safe glow of the UCM.
+You walk the blue lit streets on your way home, each unit bathing you in its glow as you walk passed.(if: $device is true)[Suddenly, there&#39;s a bright flash followed by an ear piercing ringing. The force of the explosion from 92 Cypress Street knocks you forward.
+
+You look back at the rubble where the rowhouse once stood, rosebushes aflame.
 
 
-[[The End -&gt; restart]]</tw-passagedata><tw-passagedata pid="110" name=" messageSeven" tags="" position="6850,2503" size="100,100">
+[(t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;4:15 AM: ONE NEW MESSAGE&#39;&#39;]]
+
+(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageSix]]]]]]{
+
+}(if: $device is false)[[[Continue -&gt; missionFourArrest]]]{
+
+
+}(else:)[[[The End -&gt; restart]]]</tw-passagedata><tw-passagedata pid="110" name=" messageSeven" tags="" position="6808,2520" size="100,100">
 (font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;MESSAGE FROM AKIRA:&#39;&#39;
 Good work tonight. You should get home and rest up. Your next shift starts in 6 hours.
 
