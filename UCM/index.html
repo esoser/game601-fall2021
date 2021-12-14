@@ -309,7 +309,7 @@ The panel on the wall lifts open revealing the internal workings of the home uni
 }
 The Emergency Dispatch Team will arrive at your location as soon as you leave the premises.
 
-(if: $missionTwoConvo is true)[[[Leave -&gt; missionTwoEnd]]](else:)[[[Back -&gt; missionTwoHomeUnit]]]</tw-passagedata><tw-passagedata pid="38" name=" missionTwoHomeUnitRepair" tags="" position="2859,1198" size="100,100">{
+(if: $missionTwoConvo is true)[[[Leave -&gt; missionTwoEnd]]](else:)[[[Back -&gt; missionTwoHomeUnit]]]</tw-passagedata><tw-passagedata pid="38" name=" missionTwoHomeUnitRepair" tags="" position="2860,1198" size="100,100">{
 (set: $wireCount to $wireCount - 1)
 (set: $missionTwo to true)
 }
@@ -320,7 +320,7 @@ The panel switches on, glowing blue as the face of the panel shuts. You now have
 </tw-passagedata><tw-passagedata pid="39" name=" missionTwoBattery" tags="" position="2445,1207" size="100,100">The battery looks new.
 
 
-[[Back -&gt; missionTwoScanOpenPanel]]</tw-passagedata><tw-passagedata pid="40" name=" missionTwoWire" tags="" position="2642,1198" size="100,100">It looks like one of the wires was cut.
+[[Back -&gt; missionTwoScanOpenPanel]]</tw-passagedata><tw-passagedata pid="40" name=" missionTwoWire" tags="" position="2643,1198" size="100,100">It looks like one of the wires was cut.
 
 
 
@@ -359,7 +359,7 @@ The blue light from the Home Unit illuminates the wrap around porch of the old V
 
 (t8n:&quot;fade&quot;)+(t8n-delay:5s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; missionThreePre]]]]]</tw-passagedata><tw-passagedata pid="44" name=" missionThreePre" tags="" position="3096,678" size="100,100">{
 }
-It&#39;s inspiring seeing all the blue UCM lights, knowing you&#39;re in part responsible for the safety and security of the entire neighborhooid. Just the other day you read on the UCM Bulletin that crime is down 300% since mass adoption of the network. If that&#39;s not proof that the system works, what could be? 
+It&#39;s inspiring seeing all the blue UCM lights, knowing you&#39;re in part responsible for the safety and security of the entire neighborhood. Just the other day you read on the UCM Bulletin that crime is down 300% since mass adoption of the network. If that&#39;s not proof that the system works, what could be? 
 
 
 [[Keep walking -&gt; missionThreeStart]]</tw-passagedata><tw-passagedata pid="45" name=" missionThreeStart" tags="" position="3705,317" size="100,100">{
@@ -477,24 +477,24 @@ The wires have been removed from the Home Unit.
 (set: $missionThreeBattery to true)
 (set: $batteryCount to $batteryCount - 1)
 }
-(if: $missionThreeWire is false)[The Home Unit is still offline.
+(if: $missionThreeWire is false)[The Home Unit is still offline. You have (text-colour:#ff64b1)[&#39;&#39;batteries ($batteryCount)&#39;&#39;] remaining.
 
 
 [[Check wires -&gt; missionThreeWire]]]{
 
-}(else:)[The Home Unit is online.
+}(else:)[The Home Unit is online. You have (text-colour:#ff64b1)[&#39;&#39;batteries ($batteryCount)&#39;&#39;] remaining.
 
 
 [[Next -&gt; missionThreeHomeUnitRepair]]]</tw-passagedata><tw-passagedata pid="57" name=" missionThreeWireFix" tags="" position="3799,1123" size="100,100">{
 (set: $missionThreeWire to true)
 (set: $wireCount to $wireCount - 1)
 }
-(if: $missionThreeBattery is false)[The Home Unit is still offline.
+(if: $missionThreeBattery is false)[The Home Unit is still offline. You have (text-colour:#ff64b1)[&#39;&#39;wires ($wireCount)&#39;&#39;] remaining.
 
 
 [[Check battery -&gt; missionThreeBattery]]]{
 
-}(else:)[The Home Unit is online.
+}(else:)[The Home Unit is online. You have (text-colour:#ff64b1)[&#39;&#39;wires ($wireCount)&#39;&#39;] remaining.
 
 
 [[Next -&gt; missionThreeHomeUnitRepair]]]</tw-passagedata><tw-passagedata pid="58" name=" missionThreeHomeUnitRepair" tags="" position="3900,1395" size="100,100">{
@@ -624,9 +624,9 @@ The shadowy figure bursts forward from the darkness, &quot;Don&#39;t get cute wi
 (set: $interrogation to $interrogation + 1)
 (set: $device to true)
 }
-(if: $interrogation &gt;= 1)[&quot;Now that&#39;s a good neighborhood Rep. All you need to do is use this battery at your next stop and all will be forgiven,&quot; says the Interrogator through a wide grin.]{
+(if: $interrogation &gt;= 1)[&quot;Now that&#39;s a good neighborhood Rep. All you need to do is use this battery at your next stop and all will be forgiven,&quot; says the Interrogator through a wide grin. He hands you what looks like a normal battery. &quot;This ought to teach that homeowner to comply.&quot;]{
 
-}(else:)[&quot;Took you long enough to come around. Just replace the battery with this at your next stop. All will be forgiven if you can do that for me,&quot; says the Interrogator through a wide grin.]
+}(else:)[&quot;Took you long enough to come around. Just replace the battery with this at your next stop. All will be forgiven if you can do that for me,&quot; says the Interrogator through a wide grin. He hands you what looks like a normal battery. &quot;This ought to teach that homeowner to comply.&quot;]
 
 
 [[Whatever you need. -&gt; missionFourDetour1]]
@@ -651,7 +651,7 @@ The shadowy figure bursts forward from the darkness, &quot;Don&#39;t get cute wi
 
 The guards grab you by your arms and hoist you to your feet. Then...(click-replace: &quot;Then...&quot;)[[[WHACK! -&gt; prisonEnd2]]]</tw-passagedata><tw-passagedata pid="75" name=" missionFourDetour1" tags="" position="5286,706" size="100,100">{
 }
-(t8n: &quot;fade&quot;)+(t8n-delay: 2s)[The security guards escort you down a long corridor towards a large metal door. Blinding light fills the hall as the door opens, scraping across the concrete floor.
+(t8n: &quot;fade&quot;)+(t8n-delay: 2s)[The security guards escort you down a long corridor towards a large metal door. The bottom of the door scrapes across the concrete floor asd it opens, letting in a rush of blinding bright light.
 
 They push you out of the door.]
 
@@ -688,9 +688,7 @@ You knock on the door.
 }
 (font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;MESSAGE FROM AKIRA:&#39;&#39;
 
-
 Where the hell have you been? You&#39;ve been offline for over an hour! Let&#39;s get this night over with already.
-
 
 [[Close -&gt; missionFourStart]]]</tw-passagedata><tw-passagedata pid="81" name=" missionFourOwner" tags="" position="5902,675" size="100,100">{
 }
@@ -753,7 +751,7 @@ Join the resistance!]
 [[Back -&gt; missionFourHomeUnit]] </tw-passagedata><tw-passagedata pid="89" name=" missionFourConvo" tags="" position="6299,2084" size="100,100">{
 (set: $missionFourConvo to true)
 }
-The panel switches on, glowing blue as the face of the panel shuts. Phyllis lights a cigarette at the other end of the hall.
+The glowing blue light of the Home Unit fills the hallway. Phyllis lights a cigarette by the front door.
 
 &quot;(if: $awakened is true)[This UCM situation isn&#39;t all it&#39;s cracked up to be, you know. ]I take it you&#39;re new to this line of work,&quot; she says before taking a slow drag from the cigarette.
 
@@ -761,22 +759,22 @@ The panel switches on, glowing blue as the face of the panel shuts. Phyllis ligh
 (if: $device is false)[[[That&#39;s not your concern. -&gt; deviceFalse]]]{
 }(if: $device is true)[[[I&#39;m just here to do my job. -&gt; deviceTrue]]]
 [[It&#39;s not what I thought it would be. -&gt; theyAllSayThat]]
-</tw-passagedata><tw-passagedata pid="90" name=" missionFourHomeUnitBatterySwap" tags="" position="5749,1814" size="100,100">{
+</tw-passagedata><tw-passagedata pid="90" name=" missionFourHomeUnitBatterySwap" tags="" position="5611,1987" size="100,100">{
 (set: $missionFour to true)
 (set: $batteryCount to $batteryCount - 1)
 (set: $batterySwap to true)
 }
-The Home Unit is online.
+The Home Unit is online. You have (text-colour:#ff64b1)[&#39;&#39;batteries ($batteryCount)&#39;&#39;] remaining.
 
 
-[[Next -&gt; missionFourConvo]]</tw-passagedata><tw-passagedata pid="91" name=" missionFourHomeUnitDeviceSwap" tags="" position="5905,1759" size="100,100">{
+[[Next -&gt; missionFourHomeUnit]]</tw-passagedata><tw-passagedata pid="91" name=" missionFourHomeUnitDeviceSwap" tags="" position="5430,1909" size="100,100">{
 (set: $device to false)
 (set: $missionFour to true)
 }
-The Home Unit is online and ready for detonation upon your departure from the premises.
+You place the phony battery in the unit and it comes back online.
 
 
-[[Close the panel -&gt; missionFourConvo]]</tw-passagedata><tw-passagedata pid="92" name=" missionThreeID" tags="" position="3978,506" size="100,100">{
+[[Close the panel -&gt; missionFourHomeUnit]]</tw-passagedata><tw-passagedata pid="92" name=" missionThreeID" tags="" position="3978,506" size="100,100">{
 (set: $missionThreeID to true)
 }
 &quot;Oh, yes. Of course. Uh, I just moved in and the Home Unit was down when I got here. I&#39;m Sylvester. C&#39;mon in.&quot;
@@ -785,7 +783,7 @@ The Home Unit is online and ready for detonation upon your departure from the pr
 [[Enter -&gt; missionThreeHouse]]</tw-passagedata><tw-passagedata pid="93" name=" batteryCore" tags="" position="5708,1600" size="100,100">{
 (set: $batteryCore to true)
 }
-You lean in to get a better look at the battery. As you you get closer you hear (if: $awakened is true)[a voice whispering, &quot;You can see the world for what it is. Dismantle the system.&quot;](else:)[a deep humming noise.]
+You lean in to get a better look at the battery. As you you get closer you hear (if: $awakened is true)[a voice whispering, &quot;You can see the world for what it is. Dismantle the system.&quot;](else:)[a deep hum coming from the battery.]
 
 
 [[Back -&gt; missionFourBattery]]</tw-passagedata><tw-passagedata pid="94" name=" missionThreeHouseBreakIn" tags="" position="3662,474" size="100,100">{
@@ -811,9 +809,9 @@ You tear the wires out of the Home Unit and smash the battery on the floor.
 
 (text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ-&gt; messageDismantle]]]]</tw-passagedata><tw-passagedata pid="97" name=" missionFourUnitDescription" tags="" position="5811,985" size="100,100">{
 }
-Floorboard creak beneath your feet as you approach the Home Unit. A deep hum reverberates through your chest as the green glow for the [[panel -&gt; missionFourHomeUnit]] envelops you.</tw-passagedata><tw-passagedata pid="98" name=" deviceFalse" tags="" position="5842,2214" size="100,100">{
+Floorboard creak beneath your feet as you approach the Home Unit. A deep hum reverberates through your chest as the green glow for the [[panel -&gt; missionFourHomeUnit]] envelops you.</tw-passagedata><tw-passagedata pid="98" name=" deviceFalse" tags="" position="5886,2261" size="100,100">{
 }
-&quot;Is that so? I think I have a right to know what you qualifications are,&quot; snaps Phyllis. She puffs on her cigarette. &quot;Thank you for fixing the unit. You can go now.&quot;
+&quot;Is that so? I think I have a right to know what your qualifications are,&quot; snaps Phyllis. She puffs on her cigarette. &quot;Thank you for fixing the unit. You can go now.&quot;
 
 
 [[Leave -&gt; missionFourEnd2]]</tw-passagedata><tw-passagedata pid="99" name=" deviceTrue" tags="" position="6311,2304" size="100,100">{
