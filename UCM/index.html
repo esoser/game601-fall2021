@@ -865,14 +865,16 @@ Well, if you&#39;re alive you should get home and rest up. Your next shift is co
 
 (t8n:&quot;fade&quot;)+(t8n-delay:3s)[(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[CLOSE-&gt; explosiveEnding]]]]</tw-passagedata><tw-passagedata pid="106" name=" explosiveEnding" tags="" position="5834,2924" size="100,100">{
 }
-Firetrucks blur past you towards the site of the explosion as you walk home. The blaring sirens grow faint as you turn the corner and into the darkness.
+Firetrucks blur past you towards the site of the explosion as you walk home. The blaring sirens grow faint as you turn the corner and continue forward into the darkness.
 
 
 (t8n: &quot;fade&quot;)+(t8n-delay: 4s)[[[The End -&gt; restart]]]</tw-passagedata><tw-passagedata pid="107" name=" missionFourArrest" tags="" position="6670,2903" size="100,100">{
 }
-(if: $arrestBeacon is false)[You reach the end of the road and look back as emergency response vehicles encircle the rowhouse]. As you turn the corner and 92 Cypress Street disappears from view, a white van with the UCM Corp. logo printed on the side comes screeching to a halt beside you.
+(if: $arrestBeacon is false)[You reach the end of the road and look back as emergency response vehicles encircle the rowhouse.] As you turn the corner and 92 Cypress Street disappears from view, an unmarked van comes screeching to a halt beside you.
 
-A group of masked individuals grab you and throw you in the back, never to be heard from or seen again.
+A group of masked individuals grab you and throw you in the back, &quot;You think you can just let these monsters roam the streets!?&quot; one of them shouts. 
+
+The van goes roaring down the street with you in tow, never to be heard from or seen again.
 
 
 [[The End -&gt; restart]] </tw-passagedata><tw-passagedata pid="108" name=" missionFourEnd3" tags="" position="6731,2344" size="100,100">92 CYPRESS STREET
@@ -891,9 +893,9 @@ You look back at the rubble where the rowhouse once stood, rosebushes aflame.
 
 [(t8n:&quot;fade&quot;)+(t8n-delay:4s)[(text-style:&quot;fade-in-out&quot;)[(font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;4:15 AM: ONE NEW MESSAGE&#39;&#39;]
 
-(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ -&gt; messageSix]]]]]]]{
+(text-colour:#00a8e4)+(font:&quot;Monospace&quot;)[[[READ -&gt; messageSix]]]]]]]
 
-}(if: $batterySwap is true)[[[Continue -&gt; missionFourArrest]]]</tw-passagedata><tw-passagedata pid="110" name=" messageSeven" tags="" position="6807,2519" size="100,100">
+(if: $batterySwap is true)[[[Continue -&gt; missionFourArrest]]]</tw-passagedata><tw-passagedata pid="110" name=" messageSeven" tags="" position="6807,2519" size="100,100">
 (font:&quot;Monospace&quot;)+(text-colour:#00a8e4)[&#39;&#39;MESSAGE FROM AKIRA:&#39;&#39;
 Good work tonight. You should get home and rest up. Your next shift starts in 6 hours.
 
